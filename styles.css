@@ -724,6 +724,7 @@ body {
 .letter-body p {
     margin-bottom: 1.3rem;
     color: var(--white-70);
+    text-align: justify;
 }
 
 .letter-body p em {
