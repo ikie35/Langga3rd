@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3rd Monthsary My Langga 💜</title>
+    <meta name="description" content="A special page for our 3rd monthsary — three months of choosing love every single day.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="JET - Tahimik (Visualizer).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Controls -->
+    <div class="music-control" id="musicControl">
+        <button onclick="toggleMusic()" id="musicBtn">🎵</button>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightboxImg" src="" alt="Full view">
+    </div>
+
+    <!-- ============================================
+         WELCOME SCREEN — CINEMATIC ENTRANCE
+         ============================================ -->
+    <section class="welcome-screen" id="welcome">
+        <div class="welcome-aurora"></div>
+        <div class="welcome-stars" id="welcomeStars"></div>
+        <canvas class="welcome-particles" id="welcomeCanvas"></canvas>
+        <div class="welcome-content">
+            <div class="welcome-badge">
+                <span class="badge-dot"></span>
+                <span>April 3, 2026</span>
+            </div>
+            <h1 class="welcome-title">
+                <span class="title-line title-light">Happy 3rd</span>
+                <span class="title-line title-gradient">Monthsary</span>
+            </h1>
+            <p class="welcome-subtitle">Three months of love, laughter, and choosing each other
+                through it all — our story is just beginning 💜</p>
+            <button class="enter-btn" onclick="enterSite()">
+                <span class="btn-text">Open Our Story</span>
+                <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </span>
+                <span class="btn-glow"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main class="main-content" id="mainContent">
+
+        <!-- HERO — IMMERSIVE FULLSCREEN -->
+        <section class="hero-section">
+            <div class="hero-bg-image">
+                <img src="featured.jpg" alt="Us Together">
+            </div>
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-inner">
+                <span class="hero-label">Our Love Story</span>
+                <h1 class="hero-heading">Three<br>Months<br>of <em>Us</em></h1>
+                <p class="hero-description">Ninety days of choosing each other. Every late-night call,
+                    every "I love you," every moment we share across the distance — they all weave
+                    into this beautiful love story of ours. 💜</p>
+                <div class="hero-counter">
+                    <div class="counter-block">
+                        <span class="counter-value" id="counterDays">0</span>
+                        <span class="counter-label">Days</span>
+                    </div>
+                    <div class="counter-block">
+                        <span class="counter-value" id="counterHours">0</span>
+                        <span class="counter-label">Hours</span>
+                    </div>
+                    <div class="counter-block">
+                        <span class="counter-value" id="counterMinutes">0</span>
+                        <span class="counter-label">Minutes</span>
+                    </div>
+                    <div class="counter-block">
+                        <span class="counter-value" id="counterSeconds">0</span>
+                        <span class="counter-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-icon">💜</span>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- LOVE LETTER -->
+        <section class="letter-section">
+            <div class="letter-wrapper">
+                <div class="letter-card">
+                    <div class="letter-seal">💌</div>
+                    <div class="letter-header">
+                        <span class="letter-emoji">✉️</span>
+                        <h2>A Letter For You</h2>
+                    </div>
+                    <div class="letter-body">
+                        <p class="letter-greeting">Happy 3rd Monthsary, Langga nako! 💜</p>
+
+                        <p>Three months na tayo — and every single day, mas lalong lumalim ang pagmamahal ko sa'yo. 
+                            Looking back at where we started, I can't believe how much we've grown together. 
+                            What we have is something I've never had with anyone else, and I'm so grateful 
+                            that it's you I'm building this life with.</p>
+
+                        <p>This month, I've learned even more about us — about how strong we are when we 
+                            face things together, about how your patience and love make me want to be a better 
+                            person every day. You teach me things about love that I never knew before, Langga, 
+                            and I'm still learning because of you.</p>
+
+                        <p>Alam mo naman na hindi palaging madali, but every challenge we face just proves 
+                            na we're meant for each other. Every small fight teaches us, every sweet moment 
+                            reminds us why we chose this — why we chose <em>us</em>. And I would choose you 
+                            again and again, a thousand times over. 💜</p>
+
+                        <p>I promise to keep loving you harder, deeper, and more intentionally with every 
+                            passing day. I promise to stay — on the good days, on the hard days, on the days 
+                            when everything feels uncertain. Mamahalin kita, palagi. I will always be right 
+                            here beside you.</p>
+
+                        <p>I love you beyond words, John Micheal Hemperoso. You are my peace, 
+                            my happiness, my home, and my forever. My only Langga Forever. 🌙💜</p>
+
+                        <p class="letter-closing">Always and forever yours,</p>
+                        <p class="letter-signature">Your Langga Forever 💜∞</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-icon">✨</span>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- PHOTO GALLERY -->
+        <section class="gallery-section">
+            <div class="section-header">
+                <p class="section-eyebrow">Our Memories</p>
+                <h2>Moments <em>Together</em></h2>
+                <p class="section-subtitle">Every screenshot tells a story of us 💜</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Replace these src values with your actual photos -->
+                <div class="gallery-item span-2-both">
+                    <img src="photo1.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Us 💜</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo2.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Late nights 🌙</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo3.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Always smiling ✨</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo4.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>My favorite 💕</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo5.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>So cute 💗</span></div>
+                </div>
+                <div class="gallery-item span-2-col">
+                    <img src="photo6.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Favorite call 📱</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo7.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Beautiful 💜</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo8.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Together 🌙</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo9.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>My love 💜</span></div>
+                </div>
+                <div class="gallery-item span-2-col">
+                    <img src="photo10.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Always yours 💫</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo11.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>My world 🌍</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo12.jpg" alt="Our moment">
+                    <div class="item-overlay"><span>Forever 💜</span></div>
+                </div>
+            </div>
+            <p class="gallery-caption">Every moment with you is a memory I'll treasure forever ✨</p>
+        </section>
+
+        <!-- DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-icon">💕</span>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- REASONS -->
+        <section class="reasons-section">
+            <div class="section-header">
+                <p class="section-eyebrow">From My Heart</p>
+                <h2>Why I <em>Love You</em></h2>
+                <p class="section-subtitle">More reasons every single day 💜</p>
+            </div>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <p>Your unwavering patience — even when I'm at my most difficult, you never stop 
+                        trying to understand me. That's a love I never want to let go of. 💜</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <p>How you make me feel like the most important person in the world. With you, 
+                        I never have to question if I'm loved — I just know. 🥺</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <p>Your voice — even on the most tiring days, hearing you makes everything 
+                        feel lighter. You're my instant comfort. 😊</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">04</div>
+                    <p>How you fight for us. You don't just let things go — you communicate, 
+                        you fix, you love harder. That's how I know this is real. 🌙</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">05</div>
+                    <p>The way you surprise me with little things — sweet messages, late-night 
+                        calls, random "I love you"s that make my heart skip. 💜</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">06</div>
+                    <p>How you make me believe that distance is just a number. With you, 
+                        even miles apart feels like being in each other's arms. 📖✨</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-icon">🌙</span>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- TIMELINE -->
+        <section class="timeline-section">
+            <div class="section-header">
+                <p class="section-eyebrow">Our Story</p>
+                <h2>The <em>Journey</em></h2>
+                <p class="section-subtitle">Every chapter of our love story 💜</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">January 3, 2026</span>
+                        <h3>We Became Official 💜</h3>
+                        <p>The day you said yes and changed my life forever. Best day of my life.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">February 3, 2026</span>
+                        <h3>1st Monthsary ✨</h3>
+                        <p>Our very first monthsary — proof that real love doesn't need proximity!</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">February 14, 2026</span>
+                        <h3>Our First Valentine's ❤️</h3>
+                        <p>Our first Valentine's Day together — even from a distance, the love was overwhelming.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">March 3, 2026</span>
+                        <h3>2nd Monthsary 💫</h3>
+                        <p>Two months of growing stronger together — learning, loving, and never giving up on us.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-card highlight">
+                        <span class="timeline-date">April 3, 2026</span>
+                        <h3>3rd Monthsary — Still Choosing You 🎉</h3>
+                        <p>Three months down, forever to go. Every day with you makes me fall deeper in love, Langga! 💜</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-icon">💫</span>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- PROMISE -->
+        <section class="promise-section">
+            <div class="promise-card">
+                <div class="promise-icon">💜</div>
+                <h2>My Promise To You</h2>
+                <div class="promise-list">
+                    <p>I promise to love you on the easy days and the hard ones.</p>
+                    <p>I promise to always choose us, no matter what comes our way.</p>
+                    <p>I promise to be your safe place, your partner, your home.</p>
+                    <p>I promise to grow with you — becoming a better person for you, for us.</p>
+                    <p>I promise to fight for our love — today, tomorrow, and always.</p>
+                    <p>I promise that no distance, no challenge, no storm will ever make me give up on us.</p>
+                    <p><strong>You are my forever and always — three months in, and I'm more sure than ever.</strong></p>
+                </div>
+                <div class="promise-signature">
+                    <span>With all my love,</span>
+                    <span class="sig-name">Your Langga 💜</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-hearts">
+                <span class="floating-heart">💜</span>
+                <span class="floating-heart">✨</span>
+                <span class="floating-heart">💫</span>
+            </div>
+            <p>Made with love, just for you</p>
+            <p class="footer-title">Happy 3rd Monthsary! 🎉</p>
+            <p class="footer-message">I love you to the moon and beyond, Langga 🌙</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
