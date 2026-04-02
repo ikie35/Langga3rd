@@ -28,6 +28,7 @@ function enterSite() {
     musicControl.classList.add('visible');
 
     bgMusic.volume = 0.5;
+    bgMusic.currentTime = 35; // Start at 35 seconds
     bgMusic.play().then(() => {
         document.getElementById('musicBtn').classList.add('playing');
     }).catch(e => console.log('Music autoplay prevented:', e));

@@ -452,6 +452,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-label {
@@ -466,11 +470,11 @@ body {
     font-weight: 300;
 }
 
-.hero-label::before {
+.hero-label::before, .hero-label::after {
     content: '';
     width: 35px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--rose-gold));
+    background: linear-gradient(90deg, transparent, var(--rose-gold), transparent);
 }
 
 .hero-heading {
@@ -481,7 +485,7 @@ body {
     font-weight: 300;
     letter-spacing: -2px;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .hero-heading em {
@@ -498,7 +502,7 @@ body {
 .hero-description {
     font-size: 1.05rem;
     color: var(--white-70);
-    max-width: 460px;
+    max-width: 600px;
     line-height: 1.9;
     margin-bottom: 3rem;
     font-weight: 300;
@@ -509,10 +513,11 @@ body {
     display: flex;
     gap: 2.5rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .counter-block {
-    text-align: left;
+    text-align: center;
     position: relative;
 }
 
