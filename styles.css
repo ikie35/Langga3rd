@@ -652,13 +652,14 @@ body {
 }
 
 .letter-card {
-    background: linear-gradient(135deg, var(--white-05), rgba(139, 92, 246, 0.03));
-    border: 1px solid var(--white-10);
+    background: linear-gradient(135deg, var(--white-05), rgba(139, 92, 246, 0.08));
+    border: 1px solid rgba(167, 139, 250, 0.2);
     border-radius: var(--radius-md);
     padding: 3.5rem;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.12), 0 0 20px rgba(244, 63, 94, 0.08);
 }
 
 .letter-card::before {
@@ -780,20 +781,21 @@ body {
 }
 
 .reason-card {
-    background: var(--white-05);
-    border: 1px solid var(--white-10);
+    background: linear-gradient(180deg, var(--white-05), transparent);
+    border: 1px solid rgba(251, 113, 133, 0.15);
     border-radius: var(--radius-md);
     padding: 2.2rem;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .reason-card:hover {
     transform: translateY(-8px);
-    border-color: var(--purple-accent);
-    box-shadow: 0 25px 60px rgba(139, 92, 246, 0.15), var(--shadow-rose);
+    border-color: rgba(232, 168, 124, 0.5);
+    box-shadow: 0 25px 60px rgba(139, 92, 246, 0.2), 0 10px 20px rgba(232, 168, 124, 0.15);
 }
 
 .reason-card::before {
@@ -919,18 +921,19 @@ body {
 }
 
 .timeline-card {
-    background: var(--white-05);
-    border: 1px solid var(--white-10);
+    background: linear-gradient(135deg, var(--white-05), transparent);
+    border: 1px solid rgba(167, 139, 250, 0.15);
     border-radius: var(--radius-sm);
     padding: 1.8rem;
     transition: var(--transition);
     backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-card:hover {
     transform: translateX(8px);
-    border-color: var(--white-20);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(232, 168, 124, 0.4);
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15), 0 5px 15px rgba(251, 113, 133, 0.1);
 }
 
 .timeline-card.highlight {
