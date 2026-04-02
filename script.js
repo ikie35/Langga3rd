@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     createFloatingParticles();
     initScrollAnimations();
     startCounter();
-    initLightbox();
 });
 
 /**
@@ -302,7 +301,7 @@ function initScrollAnimations() {
     }, observerOptions);
 
     const sections = document.querySelectorAll(
-        '.letter-section, .gallery-section, .reasons-section, .timeline-section, .promise-section'
+        '.letter-section, .reasons-section, .timeline-section, .promise-section'
     );
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -311,7 +310,7 @@ function initScrollAnimations() {
     });
 
     const items = document.querySelectorAll(
-        '.reason-card, .timeline-item, .gallery-item'
+        '.reason-card, .timeline-item'
     );
     items.forEach((item, index) => {
         item.style.opacity = '0';
@@ -321,37 +320,7 @@ function initScrollAnimations() {
     });
 }
 
-/**
- * Lightbox for gallery images
- */
-function initLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
 
-    if (!lightbox || !lightboxImg) return;
-
-    document.querySelectorAll('.gallery-item img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-}
 
 // Console message
 console.log('💜 Happy 3rd Monthsary — Three months of forever! 💜');
